@@ -8,7 +8,7 @@
     <main id="site-main">
         <div class="container">
             <div class="box-nav d-flex justify-between">
-                <a href="/add-user" class="border-shadow">
+                <a href="/add_employee" class="border-shadow">
                     <span class="text-gradient">New User <i class="fas fa-user"></i></span>
                 </a>
             </div>
@@ -20,14 +20,14 @@
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>@Email</th>
+                            <th>Email</th>
                             <th>Gender</th>
-                            <th>Status</th>
+                            <th>Role</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        
+                        <%- include('partials/tableshow') %>
                     </tbody>
                 </table>
             </form>

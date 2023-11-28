@@ -152,12 +152,12 @@ table{
 }
 
 #update_user .form-group,
-#add_user .form-group{
+#add_employee .form-group{
     margin: .4em 0;
 }
 
 #update_user .form-group input[type="text"],
-#add_user .form-group input[type="text"]{
+#add_employee .form-group input[type="text"]{
     width: 100%;
     padding: .6em 1em;
     margin: .5em 0;
@@ -168,7 +168,7 @@ table{
 }
 
 #update_user .form-group .radio,
-#add_user .form-group .radio{
+#add_employee .form-group .radio{
     margin: 1em 2em;
 }
 
@@ -213,7 +213,7 @@ table{
 }
 
 #update_user .form-group .btn,
-#add_user .form-group .btn{
+#add_employee .form-group .btn{
     width: 100%;
     padding: .9em 1em;
     background-color:#16db93; 
@@ -226,7 +226,7 @@ table{
 }
 
 #update_user .form-group .btn:hover,
-#add_user .form-group .btn:hover{
+#add_employee .form-group .btn:hover{
     background-color: var(--dark);
     color: var(--border);
 }
