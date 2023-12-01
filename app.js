@@ -43,9 +43,15 @@ app.post('/add_employee',async(req,res)=>{
 
 app.get('/update-user',async(req,res)=>{
     const id = req.query.id
-    const user = await employee.findById(id)
-    console.log(user)
-    res.render('update-user', user)
+    const userdata = await employee.findById(id)
+    console.log(userdata)
+    res.render('update-user', {user:userdata})
+})
+
+app.post('/update-user',async(req,res)=>{
+    const id = req.query.id
+    await employee.findByIdAndUpdate(id,req.body)
+    res.redirect('/')
 })
 
 
