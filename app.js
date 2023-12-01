@@ -41,6 +41,14 @@ app.post('/add_employee',async(req,res)=>{
     res.redirect('/')
 })
 
+app.get('/update-user',async(req,res)=>{
+    const id = req.query.id
+    const user = await employee.findById(id)
+    console.log(user)
+    res.render('update-user', user)
+})
+
+
 app.listen(port,()=>{
     console.log('listening on port '+ port)
 })
