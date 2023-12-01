@@ -54,6 +54,20 @@ app.post('/update-user',async(req,res)=>{
     res.redirect('/')
 })
 
+app.delete('/api/users/:id',(req,res)=>{
+    const id = req.params.id;
+    employee.findByIdAndDelete(id)
+        .then(data => {
+            if(!data){
+                res.status(404).send({ message : `Cannot Delete with id ${id}. Maybe id is wrong`})
+            }else{
+                res.send({
+                    message : "User was deleted successfully!"
+                })
+            }
+        })
+})
+
 
 app.listen(port,()=>{
     console.log('listening on port '+ port)
