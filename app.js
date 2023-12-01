@@ -4,11 +4,11 @@ const ejs = require('ejs')
 const path = require('path')
 const mongoose = require('mongoose')
 const app = express()
-const port = process.env.PORT || 4000
+const port = 3000 
 const publicDir = path.join(__dirname,'./public')
 const employee = require('./models/employee')
 
-mongoose.connect(process.env.DB_URL)
+mongoose.connect('mongodb://localhost:27017/employee-management')
 .then(()=>console.log('Connected to Database'))
 .catch((e)=>console.log('Connection to DB is failed'))
 
